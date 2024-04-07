@@ -1,0 +1,17 @@
+[
+  {
+    "name": "New jeans",
+    "price": "$40",
+    "id": "101"
+  },
+  {
+    "name": "New shrits",
+    "price": "$40",
+    "id": "102"
+  },
+  {
+    "name": "New dress",
+    "price": "$50",
+    "id": "103"
+  }
+]
