@@ -1,21 +1,35 @@
 import React, { useState } from 'react';
 
 export default function AppMentor() {
-  const [person, setPerson] = useState({
-    name: 'Hailey',
-    title: 'Developer',
-    mentors: [
-      {
-        name: 'Ellie',
-        title: 'Senior Developer',
-      },
-      {
-        name: 'Joy',
-        title: 'Senior Developer',
-      },
-    ],
-  });
-
+  const [person, setPerson] = useState(initialPerson);
+  const handleUpdate = () => {
+    const prev = prompt(`who's name to change?`);
+    const current = prompt(`what's your mentor's name?`);
+    setPerson((person) => ({
+      ...person,
+      mentors: person.mentors.map((mentor) => {
+        if (mentor.name === prev) {
+          return { ...mentor, name: current };
+        }
+        return mentor;
+      }),
+    }));
+  };
+  const handleAdd = () => {
+    const name = prompt(`What's new mentor's name?`);
+    const title = prompt(`Whats's new mentor's title?`);
+    setPerson((person) => ({
+      ...person,
+      mentors: [...person.mentors, { name, title }],
+    }));
+  };
+  const handleRemove = () => {
+    const name = prompt(`What's new mentor's name?`);
+    setPerson((person) => ({
+      ...person,
+      mentors: person.mentors.filter((mentor) => mentor.name !== name),
+    }));
+  };
   return (
     <div>
       <h1>
@@ -29,54 +43,24 @@ export default function AppMentor() {
           </li>
         ))}
       </ul>
-      <button
-        onClick={() => {
-          const prev = prompt(`who's name to change?`);
-          const current = prompt(`what's your mentor's name?`);
-          const editedMentors = person.mentors.map((mentor) => {
-            if (mentor.name === prev) {
-              return { ...mentor, name: current };
-            } else {
-              return mentor;
-            }
-          });
-          // setPerson((prev) => ({ ...prev, mentors: editedMentors }));
-          setPerson((person) => ({
-            ...person,
-            mentors: person.mentors.map((mentor) => {
-              if (mentor.name === prev) {
-                return { ...mentor, name: current };
-              }
-              return mentor;
-            }),
-          }));
-        }}
-      >
-        Change Mentor's name
-      </button>
-      <button
-        onClick={() => {
-          const name = prompt(`What's new mentor's name?`);
-          const title = prompt(`Whats's new mentor's title?`);
-          setPerson((person) => ({
-            ...person,
-            mentors: [...person.mentors, { name, title }],
-          }));
-        }}
-      >
-        Add Mentor
-      </button>
-      <button
-        onClick={() => {
-          const name = prompt(`What's new mentor's name?`);
-          setPerson((person) => ({
-            ...person,
-            mentors: person.mentors.filter((mentor) => mentor.name !== name),
-          }));
-        }}
-      >
-        Delete Mentor
-      </button>
+      <button onClick={handleUpdate}>Change Mentor's name</button>
+      <button onClick={handleAdd}>Add Mentor</button>
+      <button onClick={handleRemove}>Delete Mentor</button>
     </div>
   );
 }
+
+const initialPerson = {
+  name: 'Hailey',
+  title: 'Developer',
+  mentors: [
+    {
+      name: 'Ellie',
+      title: 'Senior Developer',
+    },
+    {
+      name: 'Joy',
+      title: 'Senior Developer',
+    },
+  ],
+};
