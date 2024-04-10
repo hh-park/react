@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// import AppTheme from './AppTheme';
+import AppMentorsButton from './AppMentorsButton';
 // import AppProducts from './basic/AppProducts';
 // import AppProfile from './basic/AppProfile';
 // import AppCounter from './basic/AppCounter';
@@ -10,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 // import AppMentorsImmer from './AppMentorsImmer';
 // import AppForm from './AppForm';
 // import AppWrap from './AppWrap';
-import AppCard from './AppCard';
+// import AppCard from './AppCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +25,9 @@ root.render(
     {/* <AppMentorsImmer /> */}
     {/* <AppForm /> */}
     {/* <AppWrap /> */}
-    <AppCard />
+    {/* <AppCard /> */}
+    {/* <AppTheme /> */}
+    <AppMentorsButton />
   </React.StrictMode>
 );
 
