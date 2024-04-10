@@ -8,7 +8,9 @@ import reportWebVitals from './reportWebVitals';
 // import AppXY from './AppXY';
 // import AppMentors from './AppMentors';
 // import AppMentorsImmer from './AppMentorsImmer';
-import AppForm from './AppForm';
+// import AppForm from './AppForm';
+// import AppWrap from './AppWrap';
+import AppCard from './AppCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +21,9 @@ root.render(
     {/* <AppXY /> */}
     {/* <AppMentors /> */}
     {/* <AppMentorsImmer /> */}
-    <AppForm />
+    {/* <AppForm /> */}
+    {/* <AppWrap /> */}
+    <AppCard />
   </React.StrictMode>
 );
 
