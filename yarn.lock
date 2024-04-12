@@ -4177,6 +4177,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-scripts: "npm:5.0.1"
     styled-components: "npm:^6.1.8"
+    tailwindcss: "npm:^3.4.3"
     use-immer: "npm:^0.9.0"
     web-vitals: "npm:^2.1.0"
   languageName: unknown
@@ -12555,7 +12556,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.2":
+"tailwindcss@npm:^3.0.2, tailwindcss@npm:^3.4.3":
   version: 3.4.3
   resolution: "tailwindcss@npm:3.4.3"
   dependencies:
