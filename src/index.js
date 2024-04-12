@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AppClass from './AppClass';
+
+import App from './reactCss/App';
+
+// import AppClass from './AppClass';
 // import AppTheme from './AppTheme';
 // import AppMentorsButton from './AppMentorsButton';
 // import AppProducts from './basic/AppProducts';
@@ -29,7 +32,8 @@ root.render(
     {/* <AppCard /> */}
     {/* <AppTheme /> */}
     {/* <AppMentorsButton /> */}
-    <AppClass />
+    {/* <AppClass /> */}
+    <App />
   </React.StrictMode>
 );
 
