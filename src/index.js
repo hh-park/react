@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import AppClass from './AppClass';
 // import AppTheme from './AppTheme';
 // import AppMentorsButton from './AppMentorsButton';
-import AppProducts from './basic/AppProducts';
+// import AppProducts from './basic/AppProducts';
 // import AppProfile from './basic/AppProfile';
 // import AppCounter from './basic/AppCounter';
 // import AppXY from './AppXY';
@@ -19,7 +20,7 @@ root.render(
   <React.StrictMode>
     {/* <AppProfile /> */}
     {/* <AppCounter /> */}
-    <AppProducts />
+    {/* <AppProducts /> */}
     {/* <AppXY /> */}
     {/* <AppMentors /> */}
     {/* <AppMentorsImmer /> */}
@@ -28,6 +29,7 @@ root.render(
     {/* <AppCard /> */}
     {/* <AppTheme /> */}
     {/* <AppMentorsButton /> */}
+    <AppClass />
   </React.StrictMode>
 );
 
